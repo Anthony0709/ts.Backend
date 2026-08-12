@@ -1,0 +1,67 @@
+import { Router } from 'express';
+
+import empresaRoutes from '../modules/empresa/routes/empresa.routes';
+import authRoutes from '../modules/auth/routes/auth.routes';
+import rolRoutes from '../modules/rol/routes/rol.routes';
+import sucursalRoutes from '../modules/sucursal/routes/sucursal.routes';
+import clienteRoutes from '../modules/cliente/routes/cliente.routes';
+import proveedorRoutes from '../modules/proveedor/routes/proveedor.routes';
+import categoriaRoutes from '../modules/categoria/routes/categoria.routes';
+import marcaRoutes from '../modules/marca/routes/marca.routes';
+import productoRoutes from '../modules/producto/routes/producto.routes';
+import bodegaRoutes from '../modules/bodega/routes/bodega.routes';
+import inventarioRoutes from '../modules/inventario/routes/inventario.routes';
+import movimientoInventarioRoutes from '../modules/movimiento-inventario/routes/movimiento-inventario.routes';
+import compraRoutes from '../modules/compras/routes/compra.routes';
+import ventaRoutes from '../modules/ventas/routes/venta.routes';
+import cotizacionRoutes from '../modules/cotizaciones/routes/cotizacion.routes';
+import cuentaCobrarRoutes from '../modules/cuentas-cobrar/routes/cuenta-cobrar.routes';
+import cuentaPagarRoutes from '../modules/cuentas-pagar/routes/cuenta-pagar.routes';
+import ordenCompraRoutes from '../modules/ordenes-compra/routes/orden-compra.routes';
+import cajaRoutes from '../modules/caja/routes/caja.routes';
+import kardexRoutes from '../modules/kardex/routes/kardex.routes';
+import transferenciaRoutes from '../modules/transferencias/routes/transferencia.routes';
+import app from '../app';
+import gastoRoutes from '../modules/gastos/routes/gasto.routes';
+import reporteRoutes from '../modules/reportes/routes/reporte.routes';
+import auditoriaRoutes from '../modules/auditoria/routes/auditoria.routes';
+import configuracionRoutes from '../modules/configuracion/routes/configuracion.routes';
+import posRoutes from '../modules/pos/routes/pos.routes';
+import dashboardRoutes from '../modules/dashboard/routes/dashboard.routes';
+import usuarioRoutes from '../modules/usuario/routes/usuario.routes';
+import planRoutes from '../modules/plan/routes/plan.routes';
+
+const router = Router();
+
+
+router.use('/auth', authRoutes);
+router.use('/usuarios', usuarioRoutes);
+router.use('/roles', rolRoutes);
+router.use('/empresas', empresaRoutes);
+router.use('/sucursales', sucursalRoutes);
+router.use('/clientes', clienteRoutes); 
+router.use('/proveedores', proveedorRoutes);
+router.use('/categorias', categoriaRoutes);
+router.use('/marcas', marcaRoutes);
+router.use('/productos', productoRoutes);
+router.use('/bodegas', bodegaRoutes);
+router.use('/inventario', inventarioRoutes);
+router.use('/movimientos-inventario', movimientoInventarioRoutes);
+router.use('/compras', compraRoutes);
+router.use('/ventas', ventaRoutes);
+router.use('/cotizaciones', cotizacionRoutes);
+router.use('/ordenes-compra', ordenCompraRoutes);
+router.use('/caja', cajaRoutes);
+router.use('/cuentas-cobrar', cuentaCobrarRoutes);
+router.use('/cuentas-pagar',cuentaPagarRoutes);
+router.use('/kardex', kardexRoutes);
+router.use('/transferencias',transferenciaRoutes);
+router.use('/gastos', gastoRoutes);
+router.use('/reportes', reporteRoutes);
+router.use('/auditoria', auditoriaRoutes);
+router.use('/configuracion', configuracionRoutes);
+router.use('/pos', posRoutes);
+router.use("/dashboard", dashboardRoutes);
+router.use('/planes', planRoutes);
+
+export default router;
