@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.validarReporteGastos = exports.validarReporteCuentasPagar = exports.validarReporteCuentasCobrar = exports.validarReporteClientes = exports.validarReporteInventario = exports.validarReporteCompras = exports.validarReporteVentas = void 0;
+const reporte_dto_1 = require("../dto/reporte.dto");
+exports.validarReporteVentas = reporte_dto_1.ReporteVentasSchema;
+exports.validarReporteCompras = reporte_dto_1.ReporteComprasSchema;
+exports.validarReporteInventario = reporte_dto_1.ReporteInventarioSchema;
+exports.validarReporteClientes = reporte_dto_1.ReporteClientesSchema;
+exports.validarReporteCuentasCobrar = reporte_dto_1.ReporteCuentasCobrarSchema;
+exports.validarReporteCuentasPagar = reporte_dto_1.ReporteCuentasPagarSchema;
+exports.validarReporteGastos = reporte_dto_1.ReporteGastosSchema;

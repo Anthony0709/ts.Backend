@@ -146,12 +146,7 @@ model Sucursal {
 
   empresaId String
 
-  empresa Empresa
-    @relation(
-      fields: [empresaId],
-      references: [id],
-      onDelete: Restrict
-    )
+  empresa Empresa @relation(fields: [empresaId], references: [id], onDelete: Restrict)
 
   //=====================================================
   // BODEGA PRINCIPAL DE LA SUCURSAL
@@ -159,19 +154,13 @@ model Sucursal {
 
   bodegaPrincipalId String?
 
-  bodegaPrincipal Bodega?
-    @relation(
-      "BodegaPrincipalSucursal",
-      fields: [bodegaPrincipalId],
-      references: [id]
-    )
+  bodegaPrincipal Bodega? @relation("BodegaPrincipalSucursal", fields: [bodegaPrincipalId], references: [id])
 
   //=====================================================
   // BODEGAS DE LA SUCURSAL
   //=====================================================
 
-  bodegas Bodega[]
-    @relation("BodegasSucursal")
+  bodegas Bodega[] @relation("BodegasSucursal")
 
   //=====================================================
   // CAJAS / PUNTOS DE VENTA
@@ -474,11 +463,7 @@ model Bodega {
 
   empresaId String
 
-  empresa Empresa
-    @relation(
-      fields: [empresaId],
-      references: [id]
-    )
+  empresa Empresa @relation(fields: [empresaId], references: [id])
 
   //=====================================================
   // SUCURSAL
@@ -486,12 +471,7 @@ model Bodega {
 
   sucursalId String?
 
-  sucursal Sucursal?
-    @relation(
-      "BodegasSucursal",
-      fields: [sucursalId],
-      references: [id]
-    )
+  sucursal Sucursal? @relation("BodegasSucursal", fields: [sucursalId], references: [id])
 
   //=====================================================
   // BODEGA PRINCIPAL DE SUCURSAL
@@ -888,11 +868,7 @@ model Caja {
 
   sucursalId String
 
-  sucursal Sucursal
-    @relation(
-      fields: [sucursalId],
-      references: [id]
-    )
+  sucursal Sucursal @relation(fields: [sucursalId], references: [id])
 
   //=====================================================
   // SALDOS

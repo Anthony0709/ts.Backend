@@ -11,7 +11,7 @@
     "setup": "npx prisma migrate deploy && npm run seed && npm run seed:admin"
   },
   "keywords": [],
-  "author": "",  
+  "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
@@ -27,7 +27,6 @@
     "morgan": "^1.11.0",
     "pino": "^10.3.1",
     "pino-http": "^11.0.0",
-    "prisma": "^6.16.2",
     "swagger-jsdoc": "^6.3.0",
     "swagger-ui-express": "^5.0.1",
     "zod": "^4.4.3"
@@ -42,6 +41,7 @@
     "@types/node": "^26.1.0",
     "@types/swagger-jsdoc": "^6.0.4",
     "@types/swagger-ui-express": "^4.1.8",
+    "prisma": "^6.16.2",
     "tsx": "^4.23.0",
     "typescript": "^6.0.3"
   }
